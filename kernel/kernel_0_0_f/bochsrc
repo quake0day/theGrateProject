@@ -1,0 +1,10 @@
+romimage: file=/usr/share/bochs/BIOS-bochs-latest
+vgaromimage: file=/usr/share/bochs/VGABIOS-elpin-2.40
+
+megs: 32
+
+floppya: 1_44=helloworld.img, status=inserted
+
+boot: floppy
+
+log: bochs.log

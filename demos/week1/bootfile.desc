@@ -1,0 +1,8 @@
+# DemOS boot image
+#
+# $Id: bootfile.desc,v 1.2 2000/09/13 08:00:17 konkers Exp $
+
+[demos]
+type=boot
+file=demos
+ventry=128

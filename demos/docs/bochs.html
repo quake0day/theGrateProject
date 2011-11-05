@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title>Bochs and your OS</title>
+  </head>
+
+  <body>
+    <h1>Bochs and your OS</h1>
+
+    <h2>compiling</h2>
+    Compile bochs with the following options:<BR>
+<tt>./configure --with-x11 --enable-fpu --enable-vga</tt>
+    
+    <h2>configuring</h2>
+    Find some good place to keep your hard drive and floppy images.  For now I'll
+assume /tmp.  Put the following options in your .bochsrc:
+<pre><tt>
+megs: 8
+boot: c
+
+diskc: file=/tmp/30M, cyl=615, heads=6, spt=17
+floppya: 1_44=/tmp/1.44a, status=inserted
+</tt></pre>
+
+    Put the following option in /etc/mtools.conf
+<pre><tt>
+drive c: file="/tmp/30M" offset=8704
+</tt></pre>
+
+    <h2>installing dos</h2>
+Format a DOS floppy under windows with fdisk and format and dd that to /tmp/1.44a:<BR>
+<tt>dd if=/dev/fd0 of=/tmp/1.44a</tt>
+<P>
+now boot with <tt>bochs boot:a</tt> and run <tt>fdisk</tt> and make a primary dos partition.
+Boot again with <tt>bochs boot:a</tt> and <tt>format c:</tt><P>
+<P>
+Copy boot.com to c: using <tt>mcopy boot.com c:</tt>
+
+    <h2>running your os</h2>
+Simply copy your SBBB image to the drive image (<tt>mcopy bootimg c:</tt>), boot, and
+run <tt>boot bootimg</tt>
+
+    <hr>
+$Id: bochs.html,v 1.2 2000/09/13 08:00:17 konkers Exp $
+  </body>
+</html>

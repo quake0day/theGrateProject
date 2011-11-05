@@ -1,0 +1,5 @@
+CC=/develop/xdev/i386-unknown-elf/bin/g++
+LD=/develop/xdev/i386-unknown-elf/bin/ld
+AS=/develop/xdev/i386-unknown-elf/bin/as
+AR=/develop/xdev/i386-unknown-elf/bin/ar
+PROJROOT=/home/gilling/konkos

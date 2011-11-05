@@ -1,0 +1,9 @@
+CC=/extra/sigops/xdev386/bin/i386-unknown-gnu-gcc
+CXX=/extra/sigops/xdev386/bin/i386-unknown-gnu-g++
+LD=/extra/sigops/xdev386/bin/i386-unknown-gnu-ld
+AS=/extra/sigops/xdev386/bin/i386-unknown-gnu-as
+AR=/extra/sigops/xdev386/bin/i386-unknown-gnu-ar
+OBJDUMP=/extra/sigops/xdev386/bin/objdump386
+BOOTMAKER=/extra/sigops/bin/bootmaker
+NETBOOT=/extra/sigops/bin/netboot
+PROJROOT=/home/gilling/konkos

@@ -1,0 +1,11 @@
+CCPRE=/usr/local/i386-unknown-gnu/bin/
+CC=gcc
+CXX=${CCPRE}g++
+LD=${CCPRE}ld
+AS=${CCPRE}as
+AR=${CCPRE}ar
+OBJDUMP=${CCPRE}objdump
+BOOTMAKER=bootmaker
+NETBOOT=netboot
+PROJROOT=/home/konkers/proj/demos
+
